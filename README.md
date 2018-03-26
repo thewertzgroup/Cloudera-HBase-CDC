@@ -94,9 +94,6 @@ hbase(main):040:0> put 'hbase_table_3', '100', 'c:last', 'wertz'
 hbase(main):041:0> put 'hbase_table_3', '100', 'c:age', 18
 0 row(s) in 0.0120 seconds
 
-hbase(main):042:0> scan hbase_table_3
-NameError: undefined local variable or method `hbase_table_3' for #<Object:0x7a4c472b>
-
 hbase(main):043:0> scan 'hbase_table_3'
 ROW                                COLUMN+CELL
  100                               column=c:age, timestamp=1522101454227, value=18
