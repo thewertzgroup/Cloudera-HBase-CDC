@@ -28,3 +28,20 @@ Valid options are:
 Wed Mar 21 22:49:43 : ~/IdeaProjects/hbasecdc
 [christoph@hazel] $
 ```
+
+```
+hbase(main):015:0> create 'hbase_table_3', { NAME=>'c', VERSIONS=>20}
+0 row(s) in 2.3690 seconds
+
+=> Hbase::Table - hbase_table_3
+
+hbase(main):017:0> describe 'hbase_table_3'
+Table hbase_table_3 is ENABLED
+hbase_table_3
+COLUMN FAMILIES DESCRIPTION
+{NAME => 'c', DATA_BLOCK_ENCODING => 'NONE', BLOOMFILTER => 'ROW', REPLICATION_SCOPE => '0', VERSIONS => '20', COMPRESSION => 'NONE', M
+IN_VERSIONS => '0', TTL => 'FOREVER', KEEP_DELETED_CELLS => 'FALSE', BLOCKSIZE => '65536', IN_MEMORY => 'false', BLOCKCACHE => 'true'}
+1 row(s) in 0.0290 seconds
+
+hbase(main):018:0>
+```
